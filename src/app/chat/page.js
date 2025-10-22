@@ -48,6 +48,7 @@ export default function ChatPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4">
+              
               <button
                 onClick={() => router.push('/')}
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800"
@@ -59,7 +60,7 @@ export default function ChatPage() {
             
             <div className="flex items-center space-x-4">
               <div className="text-sm text-gray-600">
-                Rate Limit: 4 requests/minute
+                Rate Limit: 20 requests/hour
               </div>
               <button
                 onClick={handleLogout}

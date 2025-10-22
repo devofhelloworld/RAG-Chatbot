@@ -15,7 +15,7 @@ const config = {
   
   // Rate limiting configuration
   RATE_LIMIT_WINDOW_MS: 60 * 1000, // 1 minute
-  RATE_LIMIT_MAX_REQUESTS: 4, // 4 requests per minute
+  RATE_LIMIT_MAX_REQUESTS: 20, // 4 requests per hour
 }
 
 module.exports = config

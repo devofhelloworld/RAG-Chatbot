@@ -41,16 +41,17 @@ export async function POST(request) {
 
     // Rate limiting check
     const now = new Date()
-    const rateLimitReset = new Date(user.rateLimitReset)
+    const oneHourFromNow = new Date(now.getTime() + 60 * 60 * 1000) // 1 hour in milliseconds
+    const rateLimitReset = user.rateLimitReset ? new Date(user.rateLimitReset) : null
     
-    if (now > rateLimitReset) {
+    if (!rateLimitReset || now > rateLimitReset) {
       // Reset rate limit
       await usersCollection.updateOne(
         { _id: user._id },
         { 
           $set: { 
-            rateLimitCount: 0,
-            rateLimitReset: new Date(now.getTime() + config.RATE_LIMIT_WINDOW_MS)
+            rateLimitCount: 1, // Set to 1 for current request
+            rateLimitReset: oneHourFromNow
           }
         }
       )
@@ -62,13 +63,16 @@ export async function POST(request) {
         },
         { status: 429 }
       )
+    } else {
+      // Increment rate limit counter and update reset time
+      await usersCollection.updateOne(
+        { _id: user._id },
+        { 
+          $inc: { rateLimitCount: 1 },
+          $set: { rateLimitReset: oneHourFromNow }
+        }
+      )
     }
-
-    // Increment rate limit counter
-    await usersCollection.updateOne(
-      { _id: user._id },
-      { $inc: { rateLimitCount: 1 } }
-    )
 
     // Get chat message
     const { message, chatId } = await request.json()
@@ -96,7 +100,7 @@ export async function POST(request) {
       response = await geminiService.generateResponse(message, context)
     } catch (error) {
       console.log('Gemini API not available, using fallback response')
-      response = `I received your message: "${message}". This is a test response. To enable full AI functionality, please add a valid Gemini API key to your .env.local file.`
+      response = `Sorry, I can only answer questions related to cricket. Please ask about cricket players, matches, rules, statistics, or anything related to the sport of cricket.`
     }
 
     // Save chat to database

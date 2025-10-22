@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2">
               <Bot className="h-8 w-8 text-primary-600" />
-              <h1 className="text-2xl font-bold text-gray-900">RAG Chatbot</h1>
+              <h1 className="text-2xl font-bold text-gray-900">CRIC Buddy</h1>
             </div>
             <nav className="flex space-x-4">
               <button 
@@ -100,11 +100,11 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Intelligent RAG-Powered
-            <span className="text-primary-600 block">Chatbot</span>
+            <span className="text-primary-600 block"> Cricket Chatbot</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Experience the future of AI conversation with our Retrieval-Augmented Generation chatbot. 
-            Get accurate, contextual answers powered by advanced vector databases and embeddings.
+            Get accurate, contextual cricket related answers powered by advanced vector databases and embeddings.
           </p>
           {/* <div className="flex justify-center space-x-4">
             <button className="btn-primary text-lg px-8 py-3 flex items-center">
@@ -141,7 +141,7 @@ export default function HomePage() {
             <Zap className="h-12 w-12 text-primary-600 mx-auto mb-4" />
             <h3 className="text-xl font-semibold mb-2">Rate Limiting</h3>
             <p className="text-gray-600">
-              Smart rate limiting ensures fair usage with 4 requests per minute per user, 
+              Smart rate limiting ensures fair usage with 20 requests per hour per user, 
               maintaining optimal performance for everyone.
             </p>
           </div>
@@ -241,12 +241,12 @@ export default function HomePage() {
               <div className="text-gray-600">Uptime</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary-600 mb-2">&lt;200ms</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">&lt;500cs</div>
               <div className="text-gray-600">Response Time</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary-600 mb-2">10K+</div>
-              <div className="text-gray-600">Active Users</div>
+              <div className="text-3xl font-bold text-primary-600 mb-2">99.99%</div>
+              <div className="text-gray-600">Accurate</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
@@ -261,10 +261,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Bot className="h-6 w-6" />
-            <span className="text-lg font-semibold">RAG Chatbot</span>
+            <span className="text-lg font-semibold">CRIC Buddy</span>
           </div>
           <p className="text-gray-400">
-            Built with ❤️ by Team 405 | Powered by Next.js & Gemini AI
+            Built with ❤️ by Sujay Kumar Singh (Team 405) | Powered by Next.js & Gemini AI
           </p>
         </div>
       </footer>

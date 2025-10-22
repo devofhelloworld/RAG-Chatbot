@@ -93,7 +93,7 @@ export default function ChatInterface({ token }) {
         <div className="flex items-center space-x-3">
           <Bot className="h-8 w-8 text-primary-600" />
           <div>
-            <h2 className="text-lg font-semibold">RAG Chatbot</h2>
+            <h2 className="text-lg font-semibold">CRIC Buddy</h2>
             <p className="text-sm text-gray-500">Powered by Gemini AI</p>
           </div>
         </div>
@@ -104,8 +104,8 @@ export default function ChatInterface({ token }) {
         {messages.length === 0 && (
           <div className="text-center text-gray-500 mt-8">
             <Bot className="h-12 w-12 mx-auto mb-4 text-gray-300" />
-            <p>Start a conversation with the RAG chatbot!</p>
-            <p className="text-sm mt-2">Ask questions about any topic and get intelligent responses.</p>
+            <p>Start a conversation with the CRIC Buddy!</p>
+            <p className="text-sm mt-2">Ask questions about any cricket related topic and get intelligent responses.</p>
           </div>
         )}
 

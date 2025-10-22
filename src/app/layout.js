@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'RAG Chatbot - Team 405',
-  description: 'A RAG-based chatbot with authentication and rate limiting',
+  description: 'A RAG-based cricket chatbot with authentication and rate limiting',
 }
 
 export default function RootLayout({ children }) {
