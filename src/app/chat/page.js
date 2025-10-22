@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import ChatInterface from '@/components/ChatInterface'
-import { ArrowLeft, LogOut } from 'lucide-react'
+import { Trash, LogOut } from 'lucide-react'
 
 export default function ChatPage() {
   const [token, setToken] = useState(null)
@@ -53,8 +53,8 @@ export default function ChatPage() {
                 onClick={() => router.push('/')}
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-800"
               >
-                <ArrowLeft className="h-5 w-5" />
-                <span>Back to Home</span>
+                <Trash className="h-5 w-5" />
+                <span>Clear</span>
               </button>
             </div>
             
