@@ -1,0 +1,34 @@
+{
+  "name": "rag-chatbot",
+  "version": "1.0.0",
+  "description": "RAG-based Chatbot with Authentication and Rate Limiting",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@google/generative-ai": "^0.21.0",
+    "mongodb": "^6.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.400.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^15.0.0"
+  },
+  "keywords": ["rag", "chatbot", "nextjs", "ai", "vercel"],
+  "author": "Team 405",
+  "license": "MIT"
+}
