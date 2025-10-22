@@ -1,4 +1,4 @@
-# RAG Chatbot - Team 405
+# RAG Chatbot - CRIC Buddy
 
 A Retrieval-Augmented Generation (RAG) chatbot built with Next.js, featuring user authentication, rate limiting, and intelligent responses powered by Google's Gemini AI.
 
@@ -111,8 +111,8 @@ rag-chatbot/
 
 ### Rate Limiting
 
-- Each user is limited to 4 requests per minute
-- Rate limit resets every minute
+- Each user is limited to 20 requests per hour
+- Rate limit resets every hour
 - Counter stored in MongoDB user document
 - Returns 429 status when limit exceeded
 
@@ -209,7 +209,7 @@ MIT License - see LICENSE file for details
 
 ## Team
 
-Built by Team 405 for the Minor Project requirement.
+Built by Sujay Kumar Singh (Team 405) for the Minor Project requirement.
 
 ## Resources
 
